@@ -12,6 +12,20 @@
     <a href="registration">Register</a>
 </head>
 <body>
-
+<h2> User : </h2>
+<ul>
+    <li id="user"></li>
+</ul>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    jQuery.ajax({
+        url:"http://localhost:8080/TP_SpringMVC/user",
+        type:'GET',
+        success: function(data){
+            console.log(data)
+            document.getElementById("user").innerText = data.prenom + " " + data.nom + " " + data.age
+        }
+    });
+</script>
 </html>

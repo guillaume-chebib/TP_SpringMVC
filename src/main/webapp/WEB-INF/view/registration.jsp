@@ -24,6 +24,8 @@
         <form:input path="email"/>
     </div>
     <input type="submit" value="Submit" />
+    <form:errors path="*" cssClass ="errorblock" element="div"/>
 </form:form>
+
 </body>
 </html>
